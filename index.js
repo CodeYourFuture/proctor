@@ -1,5 +1,10 @@
-function test(name, _, output) {
-	output.log("PASSED: " + name);
+function test(name, body, output = console) {
+	try {
+		body();
+		output.log("PASSED: " + name);
+	} catch (e) {
+		output.log("FAILED: " + name);
+	}
 }
 
 module.exports = { test };
