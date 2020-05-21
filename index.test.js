@@ -48,7 +48,7 @@ it("compares strings correctly", function (t) {
 	t.equal(mockConsole.logs[1], " - expected \"foo\" to equal \"bar\"");
 });
 
-it("compares arrays correctly", function (t) {
+it("compares equal arrays correctly", function (t) {
 	const mockConsole = logger();
 	test("name", function () {
 		assertEqual(["foo"], ["foo"]);
@@ -65,6 +65,16 @@ it("reports unequal arrays correctly", function (t) {
 
 	t.equal(mockConsole.logs[0], "FAILED: name");
 	t.equal(mockConsole.logs[1], " - expected [\"foo\"] to equal [\"bar\"]");
+});
+
+it("reports arrays of unequal length correctly", function (t) {
+	const mockConsole = logger();
+	test("name", function () {
+		assertEqual(["foo"], ["foo", "bar"]);
+	}, mockConsole);
+
+	t.equal(mockConsole.logs[0], "FAILED: name");
+	t.equal(mockConsole.logs[1], " - expected [\"foo\"] to equal [\"foo\",\"bar\"]");
 });
 
 function logger() {

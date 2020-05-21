@@ -14,9 +14,10 @@ function test(name, body, output = console) {
 function assertEqual(actual, expected) {
 	if (Array.isArray(actual) && Array.isArray(expected)) {
 		try {
-			actual.forEach((value, index) => {
-				assertEqual(value, expected[index]);
-			});
+			const maxLength = Math.max(actual.length, expected.length);
+			for (let index = 0; index < maxLength; index++) {
+				assertEqual(actual[index], expected[index]);
+			}
 		} catch (e) {
 			throwUnequal(actual, expected);
 		}
@@ -26,7 +27,9 @@ function assertEqual(actual, expected) {
 }
 
 function throwUnequal(actual, expected) {
-	throw new Error("expected " + JSON.stringify(actual) + " to equal " + JSON.stringify(expected));
+	throw new Error(
+		`expected ${JSON.stringify(actual)} to equal ${JSON.stringify(expected)}`
+	);
 }
 
 module.exports = { assertEqual, test };
