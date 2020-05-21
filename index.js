@@ -1,3 +1,6 @@
+// Code below this line is boilerplate for testing
+// See: https://github.com/CodeYourFuture/proctor
+
 function test(name, body, output = console) {
 	try {
 		body();
