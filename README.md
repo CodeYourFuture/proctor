@@ -27,7 +27,7 @@ test("this should pass", function () {
 });
 
 test("this should fail", function () {
-	assertEqual(123, 234);
+	assertEqual([123, "foo"], [234, "bar"]);
 });
 
 // content of index.js here
@@ -38,5 +38,5 @@ would output:
 ```
 PASSED: this should pass
 FAILED: this should fail
- - expected 123 to equal 234
+ - expected [123,"foo"] to equal [234,"bar"]
 ```
