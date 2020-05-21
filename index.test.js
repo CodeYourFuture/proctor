@@ -38,6 +38,16 @@ it("compares numbers correctly", function (t) {
 	t.equal(mockConsole.logs[1], " - expected 1 to equal 2");
 });
 
+it("compares strings correctly", function (t) {
+	const mockConsole = logger();
+	test("name", function () {
+		assertEqual("foo", "bar");
+	}, mockConsole);
+
+	t.equal(mockConsole.logs[0], "FAILED: name");
+	t.equal(mockConsole.logs[1], " - expected \"foo\" to equal \"bar\"");
+});
+
 function logger() {
 	return {
 		logs: [],

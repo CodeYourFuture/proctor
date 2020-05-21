@@ -13,7 +13,9 @@ function test(name, body, output = console) {
 
 function assertEqual(actual, expected) {
 	if (actual !== expected) {
-		throw new Error("expected " + actual + " to equal " + expected);
+		throw new Error(
+			"expected " + JSON.stringify(actual) + " to equal " + JSON.stringify(expected)
+		);
 	}
 }
 
