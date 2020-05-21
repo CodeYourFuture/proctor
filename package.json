@@ -4,7 +4,7 @@
   "description": "A single-file test framework for Code Your Future exercises",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tape index.test.js | tap-spec"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/CodeYourFuture/proctor/issues"
   },
-  "homepage": "https://github.com/CodeYourFuture/proctor#readme"
+  "homepage": "https://github.com/CodeYourFuture/proctor#readme",
+  "devDependencies": {
+    "tap-spec": "^5.0.0",
+    "tape": "^5.0.0"
+  }
 }
