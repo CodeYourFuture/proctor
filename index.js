@@ -4,6 +4,7 @@ function test(name, body, output = console) {
 		output.log("PASSED: " + name);
 	} catch (e) {
 		output.log("FAILED: " + name);
+		output.log(" - " + e.message);
 	}
 }
 
