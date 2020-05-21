@@ -4,6 +4,7 @@
   "description": "A single-file test framework for Code Your Future exercises",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint .",
     "test": "tape index.test.js | tap-spec"
   },
   "repository": {
@@ -21,6 +22,8 @@
   },
   "homepage": "https://github.com/CodeYourFuture/proctor#readme",
   "devDependencies": {
+    "@codeyourfuture/eslint-config-standard": "^2.0.1",
+    "eslint": "^7.0.0",
     "tap-spec": "^5.0.0",
     "tape": "^5.0.0"
   }
