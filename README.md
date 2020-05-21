@@ -22,10 +22,12 @@ Copy-paste the content of `index.js` into your exercise file, and use the
 For example, running the following file with Node:
 
 ```javascript
-test("this should pass", function () {});
+test("this should pass", function () {
+	assertEqual(123, 123);
+});
 
 test("this should fail", function () {
-	throw new Error("oh no!");
+	assertEqual(123, 234);
 });
 
 // content of index.js here
@@ -36,5 +38,5 @@ would output:
 ```
 PASSED: this should pass
 FAILED: this should fail
- - oh no!
+ - expected 123 to equal 234
 ```

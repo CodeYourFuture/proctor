@@ -11,4 +11,10 @@ function test(name, body, output = console) {
 	}
 }
 
-module.exports = { test };
+function assertEqual(actual, expected) {
+	if (actual !== expected) {
+		throw new Error("expected " + actual + " to equal " + expected);
+	}
+}
+
+module.exports = { assertEqual, test };

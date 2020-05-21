@@ -1,6 +1,6 @@
 const tape = require("tape");
 
-const { test } = require(".");
+const { assertEqual, test } = require(".");
 
 it("logs a pass with an empty test", function (t) {
 	const mockConsole = logger();
@@ -26,6 +26,16 @@ it("logs the message on error", function (t) {
 	}, mockConsole);
 
 	t.equal(mockConsole.logs[1], ` - ${content}`);
+});
+
+it("compares numbers correctly", function (t) {
+	const mockConsole = logger();
+	test("name", function () {
+		assertEqual(1, 2);
+	}, mockConsole);
+
+	t.equal(mockConsole.logs[0], "FAILED: name");
+	t.equal(mockConsole.logs[1], " - expected 1 to equal 2");
 });
 
 function logger() {
