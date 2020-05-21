@@ -1,0 +1,23 @@
+{
+  "name": "@codeyourfuture/proctor",
+  "version": "0.0.1",
+  "description": "A single-file test framework for Code Your Future exercises",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeYourFuture/proctor.git"
+  },
+  "keywords": [
+    "test",
+    "exercise"
+  ],
+  "author": "Jonathan Sharpe <mail@jonrshar.pe>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeYourFuture/proctor/issues"
+  },
+  "homepage": "https://github.com/CodeYourFuture/proctor#readme"
+}
