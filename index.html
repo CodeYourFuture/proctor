@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Proctor</title>
-    <script src="index.js"></script>
+    <script src="/proctor/index.js"></script>
   </head>
   <body>
     <h1>Proctor</h1>
@@ -11,7 +11,7 @@
     <p>Open your console to try it out!</p>
     <pre><code id="examples"></code></pre>
     <script>
-      fetch("/examples.js")
+      fetch("/proctor/examples.js")
         .then((res) => {
           if (res.status !== 200) {
             throw Error("Not OK: " + res.status);

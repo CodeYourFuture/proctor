@@ -7,7 +7,7 @@
     "examples": "node ./runExamples.js",
     "lint": "eslint .",
     "test": "tape index.test.js | tap-spec",
-    "serve": "serve"
+    "serve": "node server.js"
   },
   "repository": {
     "type": "git",
