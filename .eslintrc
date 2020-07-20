@@ -5,6 +5,25 @@
   "extends": [
     "@codeyourfuture/standard"
   ],
+  "overrides": [
+    {
+      "files": [
+        "index.js"
+      ],
+      "rules": {
+        "no-unused-vars": "off"
+      }
+    },
+    {
+      "files": [
+        "examples.js"
+      ],
+      "env": {
+        "assertEqual": false,
+        "test": false
+      }
+    }
+  ],
   "parserOptions": {
     "ecmaVersion": 6
   }

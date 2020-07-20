@@ -4,8 +4,10 @@
   "description": "A single-file test framework for Code Your Future exercises",
   "main": "index.js",
   "scripts": {
+    "examples": "node ./runExamples.js",
     "lint": "eslint .",
-    "test": "tape index.test.js | tap-spec"
+    "test": "tape index.test.js | tap-spec",
+    "serve": "serve"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,7 @@
   "devDependencies": {
     "@codeyourfuture/eslint-config-standard": "^2.0.1",
     "eslint": "^7.0.0",
+    "serve": "^11.3.2",
     "tap-spec": "^5.0.0",
     "tape": "^5.0.0"
   }

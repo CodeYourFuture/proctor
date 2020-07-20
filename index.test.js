@@ -1,6 +1,6 @@
 const tape = require("tape");
 
-const { assertEqual, test } = require(".");
+const { assertEqual, test } = require("./loadGlobals");
 
 it("logs a pass with an empty test", function (t) {
 	const mockConsole = logger();

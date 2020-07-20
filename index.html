@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Proctor</title>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <h1>Proctor</h1>
+    <p>A single-file test framework for Code Your Future exercises.</p>
+    <p>Open your console to try it out!</p>
+    <pre><code id="examples"></code></pre>
+    <script>
+      fetch("/examples.js")
+        .then((res) => {
+          if (res.status !== 200) {
+            throw Error("Not OK: " + res.status);
+          }
+          return res.text();
+        })
+        .then((examples) => {
+          console.log("Examples:\n" + examples);
+          document.querySelector("#examples").textContent = examples;
+        })
+        .catch(() => {
+          console.warn("No examples available");
+        });
+    </script>
+  </body>
+</html>

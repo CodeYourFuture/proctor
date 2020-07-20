@@ -31,5 +31,3 @@ function throwUnequal(actual, expected) {
 		`expected ${JSON.stringify(actual)} to equal ${JSON.stringify(expected)}`
 	);
 }
-
-module.exports = { assertEqual, test };

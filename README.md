@@ -16,8 +16,7 @@ into the exercise file and used in-place.
 ## How do I use it?
 
 Copy-paste the content of `index.js` into your exercise file, and use the
-`test` function to write checks for the exercises. You can skip the
-`module.exports` line, that's only needed for this framework's own tests.
+`test` function to write checks for the exercises.
 
 For example, running the following file with Node:
 
@@ -40,3 +39,12 @@ PASSED: this should pass
 FAILED: this should fail
  - expected [123,"foo"] to equal [234,"bar"]
 ```
+
+## Local development
+
+The following scripts are available for local development:
+
+  - `npm run examples`: run the examples locally to see the output
+  - `npm run lint`: run ESLint on all JavaScript files
+  - `npm run test` (or `npm t`): run the tests in `index.test.js`
+  - `npm run serve`: local server for reviewing the GitHub Pages site
