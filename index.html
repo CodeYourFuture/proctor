@@ -11,6 +11,10 @@
     <p>Open your console to try it out!</p>
     <pre><code id="examples"></code></pre>
     <script>
+      const ansiCodes = /\033\[\d+m/g;
+      const oldLog = console.log;
+      console.log = (...args) => oldLog(...args.map((s) => s.replace(ansiCodes, "")));
+
       fetch("/proctor/examples.js")
         .then((res) => {
           if (res.status !== 200) {

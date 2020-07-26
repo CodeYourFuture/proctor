@@ -84,11 +84,13 @@ it("allows tests to be skipped", function (t) {
 	t.equal(mockConsole.logs[0], "○ SKIPPED: name");
 });
 
+const ansiCodes = /\033\[\d+m/g;
+
 function logger() {
 	return {
 		logs: [],
 		log(message) {
-			this.logs.push(message.trim());
+			this.logs.push(message.trim().replace(ansiCodes, ""));
 		},
 	};
 }
