@@ -4,15 +4,15 @@
 function test(name, body, output = console) {
 	try {
 		body();
-		output.log("PASSED: " + name);
+		output.log("\n ✔ PASSED: " + name);
 	} catch (e) {
-		output.log("FAILED: " + name);
-		output.log(" - " + e.message);
+		output.log("\n ✘ FAILED: " + name);
+		output.log("   - " + e.message);
 	}
 }
 
 test.skip = function (name, _, output = console) {
-	output.log("SKIPPED: " + name);
+	output.log("\n ○ SKIPPED: " + name);
 };
 
 function assertEqual(actual, expected) {

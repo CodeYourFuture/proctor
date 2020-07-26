@@ -37,10 +37,12 @@ test("this should fail", function () {
 would output:
 
 ```
-PASSED: this should pass
-SKIPPED: this should be skipped
-FAILED: this should fail
- - expected [123,"foo"] to equal [234,"bar"]
+ ✔ PASSED: this should pass
+
+ ○ SKIPPED: this should be skipped
+
+ ✘ FAILED: this should fail
+   - expected [123,"foo"] to equal [234,"bar"]
 ```
 
 ## Local development
