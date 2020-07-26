@@ -2,6 +2,8 @@
 
 A single-file test framework for Code Your Future exercises.
 
+[![Node.js CI][1]][2]
+
 ## What is this for?
 
 As part of the Code Your Future course, there are a lot of exercises for the
@@ -55,3 +57,6 @@ The following scripts are available for local development:
   - `npm run lint`: run ESLint on all JavaScript files
   - `npm run test` (or `npm t`): run the tests in `tests/index.test.js`
   - `npm run serve`: local server for reviewing the GitHub Pages site
+
+  [1]: https://github.com/CodeYourFuture/proctor/workflows/Node.js%20CI/badge.svg
+  [2]: https://github.com/CodeYourFuture/proctor/actions
