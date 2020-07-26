@@ -10,8 +10,9 @@ const path = require("path");
 const code = fs.readFileSync(path.join(__dirname, "..", "index.js"), "utf8");
 eval(code);
 
-/* global assertEqual, test */
+/* global assertEqual, test, xtest */
 global.assertEqual = assertEqual;
 global.test = test;
+global.xtest = xtest;
 
-module.exports = { assertEqual, test };
+module.exports = { assertEqual, test, xtest };

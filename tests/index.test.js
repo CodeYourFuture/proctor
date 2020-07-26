@@ -1,6 +1,6 @@
 const tape = require("tape");
 
-const { assertEqual, test } = require("./loadGlobals");
+const { assertEqual, test, xtest } = require("./loadGlobals");
 
 it("logs a pass with an empty test", function (t) {
 	const mockConsole = logger();
@@ -79,7 +79,7 @@ it("reports arrays of unequal length correctly", function (t) {
 
 it("allows tests to be skipped", function (t) {
 	const mockConsole = logger();
-	test.skip("name", function () {}, mockConsole);
+	xtest("name", function () {}, mockConsole);
 
 	t.equal(mockConsole.logs[0], "○ SKIPPED: name");
 });

@@ -20,7 +20,8 @@
       ],
       "globals": {
         "assertEqual": false,
-        "test": false
+        "test": false,
+        "xtest": false
       }
     }
   ],
