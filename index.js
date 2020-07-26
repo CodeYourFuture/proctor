@@ -17,9 +17,11 @@ function xtest(name, _, output = console) {
 
 function assertEqual(actual, expected) {
 	if (Array.isArray(actual) && Array.isArray(expected)) {
+		if (actual.length !== expected.length) {
+			throwUnequal(actual, expected);
+		}
 		try {
-			const maxLength = Math.max(actual.length, expected.length);
-			for (let index = 0; index < maxLength; index++) {
+			for (let index = 0; index < actual.length; index++) {
 				assertEqual(actual[index], expected[index]);
 			}
 		} catch (e) {

@@ -68,13 +68,15 @@ it("reports unequal arrays correctly", function (t) {
 });
 
 it("reports arrays of unequal length correctly", function (t) {
-	const mockConsole = logger();
-	test("name", function () {
+	t.throws(function () {
 		assertEqual(["foo"], ["foo", "bar"]);
-	}, mockConsole);
+	},  "- expected [\"foo\"] to equal [\"foo\",\"bar\"]");
+});
 
-	t.equal(mockConsole.logs[0], "✘ FAILED: name");
-	t.equal(mockConsole.logs[1], "- expected [\"foo\"] to equal [\"foo\",\"bar\"]");
+it("compares arrays containing undefined correctly", function (t) {
+	t.throws(function () {
+		assertEqual(["foo"], ["foo", undefined]);
+	},  "- expected [\"foo\"] to equal [\"foo\",null]");
 });
 
 it("allows tests to be skipped", function (t) {
