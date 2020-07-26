@@ -18,8 +18,9 @@
           }
           return res.text();
         })
+        .then((examples) => examples.replace(/\t/g, '  '))
         .then((examples) => {
-          console.log("Examples:\n" + examples);
+          console.log("Examples:\n\n" + examples);
           document.querySelector("#examples").textContent = examples;
         })
         .catch(() => {
