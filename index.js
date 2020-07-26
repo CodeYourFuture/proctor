@@ -11,6 +11,10 @@ function test(name, body, output = console) {
 	}
 }
 
+test.skip = function (name, _, output = console) {
+	output.log("SKIPPED: " + name);
+};
+
 function assertEqual(actual, expected) {
 	if (Array.isArray(actual) && Array.isArray(expected)) {
 		try {

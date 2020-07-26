@@ -77,6 +77,13 @@ it("reports arrays of unequal length correctly", function (t) {
 	t.equal(mockConsole.logs[1], " - expected [\"foo\"] to equal [\"foo\",\"bar\"]");
 });
 
+it("allows tests to be skipped", function (t) {
+	const mockConsole = logger();
+	test.skip("name", function () {}, mockConsole);
+
+	t.equal(mockConsole.logs[0], "SKIPPED: name");
+});
+
 function logger() {
 	return {
 		logs: [],
