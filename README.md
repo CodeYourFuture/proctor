@@ -53,5 +53,5 @@ The following scripts are available for local development:
 
   - `npm run examples`: run the examples locally to see the output
   - `npm run lint`: run ESLint on all JavaScript files
-  - `npm run test` (or `npm t`): run the tests in `index.test.js`
+  - `npm run test` (or `npm t`): run the tests in `tests/index.test.js`
   - `npm run serve`: local server for reviewing the GitHub Pages site

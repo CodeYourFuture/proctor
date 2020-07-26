@@ -4,10 +4,10 @@
   "description": "A single-file test framework for Code Your Future exercises",
   "main": "index.js",
   "scripts": {
-    "examples": "node ./runExamples.js",
+    "examples": "node ./bin/runExamples.js",
     "lint": "eslint .",
-    "test": "tape index.test.js | tap-spec",
-    "serve": "node server.js"
+    "test": "tape ./tests/*.test.js | tap-spec",
+    "serve": "node ./bin/server.js"
   },
   "repository": {
     "type": "git",
